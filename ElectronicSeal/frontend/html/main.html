@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/jquery.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <!--自定义 css 样式 -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<!--Bootstrap 导航条-->
+<nav class="navbar navbar-default position">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img alt="Brand" src="../images/logo.png" style="height: 50px;"></a>
+        </div>
+        <img alt="Brand" src="../images/main.png" style="height: 40px; margin-top: 20px;">
+        <ul class="nav navbar-nav" style="float: right;">
+            <li><a href="../index.html"><button type="button" class="btn btn-success">注销</button></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-md-2">
+        <!-- 左侧导航栏 -->
+        <ul class="nav nav-pills nav-stacked" style="width:200px;text-align:center;margin-left: 20px;">
+            <li class="active">
+                <a href="#" data-toggle="collapse1" data-target=".ok1">个人信息模块</a>
+                <ul class="nav nav-pills nav-stacked ok1">
+                    <li><a href="account.html">账户信息</a></li>
+                    <li><a href="myseal.html">我的印章</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#" data-target=".ok2">电子签章模块</a>
+                <ul class="nav nav-pills nav-stacked ok2">
+                    <li><a href="record.html">签章记录</a></li>
+                    <li><a href="verify.html">验证签章</a></li>
+                    <li><a href="signature.html">文档签章</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <img src="../images/pic_3.jpg" style="width: 1275px; height: 600px;">
+    </div>
+</div>
+</body>
+
+</html>

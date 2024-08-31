@@ -1,0 +1,60 @@
+/* 首页导航栏固定不滚动 */
+.position {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+/*统一图片轮播中图片大小（解决图片显示大小不一的问题）*/
+.carousel-inner>.item>img {
+    min-width: 100%;
+    height: 500px;
+}
+
+/*统一案例中的图片大小（解决图片显示大小不一的问题）*/
+.case {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.case img {
+    height: 200px;
+}
+
+/*在产品截图每一行之间显示一条分割线并预留一些空白*/
+.screenshot .item {
+    border-top: 1px solid #CCC;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+/*在产品截图解决文字和图片重叠问题*/
+.screenshot .item div p {
+    padding-left: 20px;
+}
+
+.screenshot .item div h2 {
+    padding-left: 20px;
+}
+
+/*调整案例详情相关信息的图片大小*/
+#img {
+    height: 80px;
+}
+
+/*设置登录窗口*/
+.modal-dialog {
+    /*透明度*/
+    opacity: 0.9;
+    width: 500px;
+}
+
+.bg {
+    background: url(../images/pic_3.jpg) no-repeat center center fixed; 
+    background-size: 100%;
+}
+
+label,table {
+    color: rgb(128,128,128);
+}

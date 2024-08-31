@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/jquery.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <!-- 引入 vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <!--引入 axios-->
+    <script type="text/javascript" src="../js/axios.js"></script>
+    <!--自定义 css 样式 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel ="shortcut icon" type="image/x-icon" href="../images/logo.ico" rel="external nofollow"  rel="external nofollow"   >
+</head>
+
+<div id="app" class="modal-dialog" style="margin-top: 10%;">
+    <div class="alert alert-success" v-show="tip" role="alert">{{msg}}</div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title text-center" id="myModalLabel">登录</h4>
+        </div>
+        <div class="modal-body" id="model-body" style="margin-left: 50px;">
+            <div class="input-group" style="width:85%">
+                <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+                <input type="text" class="form-control" placeholder="用户名" autocomplete="off" v-model="user.username">
+            </div><br />
+            <div class="input-group" style="width:85%">
+                <span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon1"></span>
+                <input type="password" class="form-control" placeholder="密码" autocomplete="off" v-model="user.password">
+            </div>
+        </div>
+        <div class="modal-footer" style="margin-left: 100px;">
+            <div class="form-group" style="width:75%">
+                <button type="button" class="btn btn-primary form-control" @click="submit">确定</button>
+            </div>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+
+<script>
+    //创建Vue实例
+    new Vue({
+        el: '#app', //el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串
+        data: { //data中用于存储数据，数据供el所指定的容器去使用，值我们暂时先写成一个对象。
+            user: {
+                username: "",
+                password: "",
+            },
+            tip: false,
+            msg: ""
+        },
+        methods: {
+            submit() {
+                if (this.user.username == '') {
+                    this.msg = "用户名不能为空"
+                    this.tip = true
+                    setTimeout(() => {
+                        this.tip = false
+                    }, 1000)
+                    return
+                }
+                if (this.user.password == '') {
+                    this.msg = "密码不能为空"
+                    this.tip = true
+                    setTimeout(() => {
+                        this.tip = false
+                    }, 1000)
+                    return
+                }
+
+                axios.post("http://localhost/user/login", this.user).then(response => {
+                    if (response.data.resultCode == 200) {
+                        this.msg = "登录成功"
+                        this.tip = true
+                        setTimeout(() => {
+                            //跳转页面
+                            window.location.href = "main.html";
+                        }, 1000)
+
+                        //保存token
+                        localStorage.setItem('Authorization', response.data.data)
+                    } else {
+                        this.msg = "登录失败"
+                        this.tip = true
+                        setTimeout(() => {
+                            this.tip = false
+                        }, 1000)
+                    }
+                })
+            },
+        }
+    })
+</script>
+</body>
+
+</html>

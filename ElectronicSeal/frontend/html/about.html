@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系方式</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/jquery.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <!--自定义 css 样式 -->
+    <link rel="stylesheet" href="../css/style.css" >
+</head>
+<body>
+<div class="container">
+    <h2>联系方式</h2>
+    <address>
+        <strong>汽车之友信息科技有限公司.</strong><br> 成都市天府三街节大厦 100 号<br>
+        <abbr title="Phone">联系电话:</abbr> 400-123-123
+    </address>
+
+    <!--表单-->
+    <h2>建议</h2>
+    <form action="../index.html" role="form" class="form-horizontal">
+        <div class="form-group">
+            <label for="" class="col-md-2 control-label">姓名</label>
+            <div class="col-md-4">
+                <input class="form-control" id="truename" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-md-2 control-label">称呼</label>
+            <div class="col-md-4">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="radio" checked />先生
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="radio"/>女士
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="job" class="col-md-2 control-label">你的职位</label>
+            <div class="col-md-2">
+                <select name="" id="job" class="form-control" >
+                    <option value="">开发者</option>
+                    <option value="">运营者</option>
+                    <option value="">管理人员</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-md-2 control-label">你最喜欢“汽车之友“的哪个功能</label>
+            <div class="col-md-4">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked>汽车产品介绍
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">汽车市场行情
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">汽车保养维修
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">其他
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-md-2 control-label">更多建议</label>
+            <div class="col-md-4">
+                <textarea rows="10" cols="100" ></textarea>
+                <h6>请不要超过500个字</h6>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary">提交</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

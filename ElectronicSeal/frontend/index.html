@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>电子签章系统首页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/jquery.js"></script>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+    <!--自定义 css 样式 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel ="shortcut icon" type="image/x-icon" href="images/logo.ico" rel="external nofollow"  rel="external nofollow"   >
+</head>
+
+<body>
+    <!--Bootstrap 导航条-->
+    <nav class="navbar navbar-default position">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img alt="Brand" src="../images/logo.png" style="height: 50px;"></a>
+            </div>
+            <img alt="Brand" src="../images/main.png" style="height: 40px; margin-top: 20px;">
+            <ul class="nav navbar-nav" style="float: right;">
+                <li><a href="html/register.html"><button type="button" class="btn btn-success">注册</button></a></li>
+                <li><a href="html/login.html"><button type="button" class="btn btn-primary">登录</button></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Bootstrap 轮播图-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/pic_1.jpeg">
+                <div class="carousel-caption">
+                    <h1>基于区块链电子签章解决方案</h1>
+                    <p>避免签章记录被删除导致无法审计与追溯</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/pic_2.jpg">
+                <div class="carousel-caption">
+                    <h1>基于区块链电子签章解决方案</h1>
+                    <p>避免签章记录被篡改导致审计、监管有误</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/pic_3.jpg">
+                <div class="carousel-caption">
+                    <h1>基于区块链电子印章解决方案</h1>
+                    <p>防止文件造假</p>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">上一张</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">下一张</span>
+        </a>
+    </div>
+
+    <!--boostrap 栅格系统-->
+    <div class="case container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/case_1.png">
+                <h2>政务应用案例</h2>
+                <p>非常不错的产品，我很喜欢</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/case_2.png">
+                <h2>企业应用案例</h2>
+                <p>非常不错的产品，我很喜欢</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/case_3.png">
+                <h2>个人应用案例</h2>
+                <p>非常不错的产品，我很喜欢</p>
+            </div>
+        </div>
+    </div>
+
+    <!--boostrap 栅格系统 -->
+    <div class="container screenshot">
+        <div class="row item">
+            <div class="col-md-5">
+                <img src="images/custom_1.jpg">
+            </div>
+            <div class="col-md-7">
+                <h2>传统电子签章系统的弊端</h2>
+                <p><b>传统电子签章系统，由于是中心化系统或数据库存储印章使用记录、签章密码等数据，存在丢失或篡改的风险，不利于可信监管、审计以及完整追溯</b></p>
+                <hr />
+                <p>
+                    情形1:若电子签章系统不存储完整的签章记录，比如记录定期删除，当签章人员私自使用电子印章，或签章人员口令被他人盗取后非法使用电子印章，且也对中心化数据库中的使用记录进行了删除，即使事后对于电子印章的使用记录进行审计，也无法发现业务人员的违规操作。<br />
+                    情形2:篡改使用记录，若签章人员非法使用了电子印章，为了逃避责任修改了使用记录，如修改了时间戳等内容，则影响事后审计与追责。<br />
+                    情形3:若有人伪造了印章图样对文件进行了盖章，并且在数据库伪造了使用记录，事后也无法审计与追责。<br />
+                    情形4:系统或数据库遭到攻击,删除记录、篡改记录，甚至篡改印章图片，对印章使用部门造成损失，对事后审计与追溯产生影响。<br />
+
+                </p>
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-md-7">
+                <h2>基于区块链电子签章系统的优势</h2>
+                <p>区块链电子印章系统使用联盟链，将印章数据作为数字资料上链，印章数据包括印章信息、制章者信息、制章者证书、签名值等，印章使用记录作为交易记录在印章使用过程中实时上链，形成印章的使用历史记录。这种区块链的应用方式不是存证，业界的存证应用仅仅是将数据上链后作为链下数据核对的依据，且不会形成查看或核验记录进行上链，基于区块链的电子印章系统，印章数据上链的同时，印章使用记录随时上链，另外根据业务需求也支持印章流转操作，如签章人员有委托他人代替签章的需求时，支持签章人员委托他人使用签章，同时委托记录上链，这些都是存证应用不支持的。
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/custom_2.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="container">
+        <hr />
+        <footer>
+            Copyright 2023 by 智谷星图 All rights reserved.
+        </footer>
+    </div>
+
+</body>
+
+</html>
